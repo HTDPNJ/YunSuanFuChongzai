@@ -151,7 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\类数组的训练\类数组的训练\MyArray.cpp" />
+    <ClCompile Include="..\..\类数组的训练\类数组的训练\重载[]和=.cpp" />
+    <ClCompile Include="dm02_运算符重载的两种方法.cpp" />
+    <ClCompile Include="dm03_运算符重载.cpp" />
     <ClCompile Include="运算符重载.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\类数组的训练\类数组的训练\myArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

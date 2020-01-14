@@ -1,20 +1,38 @@
-﻿// 运算符重载.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+﻿#include <iostream>
+using namespace std;
 
-#include <iostream>
+class Complex {
+public:
+	int a;
+	int b;
+public:
+	Complex(int a=0,int b=0) {
+		this->a = a;
+		this->b = b;
+	}
+	void printCom() {
+		cout << a << "+" << b << "i" << endl;
+	}
+};
 
-int main()
-{
-    std::cout << "Hello World!\n";
+Complex myAdd(Complex &c1, Complex &c2) {
+	Complex tmp(1, 2);
+	tmp.a = c1.a + c2.a;
+	tmp.b = c1.b + c2.b;
+	return tmp;
 }
-
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
-
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+Complex operator +(Complex &c1, Complex &c2) {
+	//全局函数实现运算符重载
+	Complex tmp(1, 2);
+	tmp.a = c1.a + c2.a;
+	tmp.b = c1.b + c2.b;
+	return tmp;
+}
+int main2020010902()
+{
+	Complex c1(1, 2), c2(3, 4);
+	Complex c3;
+	Complex c4 = c1+c2;
+	c4.printCom();
+	return 0;
+}
