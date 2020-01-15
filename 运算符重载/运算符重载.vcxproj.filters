@@ -30,6 +30,9 @@
     <ClCompile Include="..\..\类数组的训练\类数组的训练\重载[]和=.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="dm06_重载括号.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\类数组的训练\类数组的训练\myArray.h">
